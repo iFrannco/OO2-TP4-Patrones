@@ -1,6 +1,6 @@
-package ar.edu.unrn.objetos2;
+package ar.edu.unrn.objetos2.primero;
 
-public class EmpleadoRegular extends Trabajador{
+public class EmpleadoRegular extends Trabajador {
     private float sueldo;
     private String nombre;
 
@@ -10,7 +10,7 @@ public class EmpleadoRegular extends Trabajador{
     }
 
     @Override
-    float obtenerSueldo() {
+    float calcularSueldo() {
         return this.sueldo;
     }
 }
