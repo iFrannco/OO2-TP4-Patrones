@@ -1,5 +1,8 @@
-package ar.edu.unrn.objetos2.primero;
+package ar.edu.unrn.objetos2.ej1_empleados;
 
+import ar.edu.unrn.objetos2.ej1_empleados.model.CargoJerarquico;
+import ar.edu.unrn.objetos2.ej1_empleados.model.EmpleadoRegular;
+import ar.edu.unrn.objetos2.ej1_empleados.model.Empresa;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

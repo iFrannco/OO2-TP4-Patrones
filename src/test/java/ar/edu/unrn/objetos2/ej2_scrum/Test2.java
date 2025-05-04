@@ -1,4 +1,4 @@
-package ar.edu.unrn.objetos2.segundo;
+package ar.edu.unrn.objetos2.ej2_scrum;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package ar.edu.unrn.objetos2.primero;
+package ar.edu.unrn.objetos2.ej1_empleados.model;
 
 public class EmpleadoRegular extends Trabajador {
     private float sueldo;
