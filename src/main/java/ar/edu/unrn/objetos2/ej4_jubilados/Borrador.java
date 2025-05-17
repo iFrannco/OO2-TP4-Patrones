@@ -1,13 +1,14 @@
+/*
 package ar.edu.unrn.objetos2.ej4_jubilados;
 
 public class Borrador {
 }
 
-import static java.time.LocalDate.now;
-import static java.time.Month.of;
+//import static java.time.LocalDate.now;
+//import static java.time.Month.of;
 public class CalculadorJubilado implements Calculador {
-    private LogTransaction log;
-    private int mesEnPromocion;
+    //    private LogTransaction log;
+//    private int mesEnPromocion;
     public double calcularPrecio(double precioProducto) {
         double precioTotal = precioProducto;
         if (!of(mesEnPromocion).equals(now().getMonth())) {
@@ -17,11 +18,12 @@ public class CalculadorJubilado implements Calculador {
         return precioTotal;
     }
 }
-import static java.time.LocalDate.now;
-import static java.time.Month.of;
+
+//import static java.time.LocalDate.now;
+//import static java.time.Month.of;
 public class CalculadorNoJubilado implements Calculador {
-    private LogTransaction log;
-    private int mesEnPromocion;
+    //    private LogTransaction log;
+//    private int mesEnPromocion;
     public double calcularPrecio(double precioProducto) {
         double precioTotal = precioProducto;
         if (of(mesEnPromocion).equals(now().getMonth())) {
@@ -33,6 +35,6 @@ public class CalculadorNoJubilado implements Calculador {
         return precioTotal;
     }
 }
-interface Calculador {
-    double calcularPrecio(double precioProducto);
-}
+//interface Calculador {
+//    double calcularPrecio(double precioProducto);
+//}*/

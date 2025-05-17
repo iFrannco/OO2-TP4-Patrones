@@ -1,15 +1,35 @@
 package ar.edu.unrn.objetos2.ej4_jubilados;
 
-abstract class Calculador {
-    protected int mesEnPromocion;
-    // private LogTransaction log;
+import java.time.Month;
 
-    public double calcularPrecio(double precioProducto) {
-        // log.log(this.getClass().getName());
-        return precioProducto + calcularAumento(precioProducto);
+import static java.time.Month.of;
+
+public abstract class Calculador {
+    // private LogTransaction log;
+    private int mesEnPromocion;
+
+    public Calculador(int mesEnPromocion) {
+        this.mesEnPromocion = mesEnPromocion;
     }
 
-    protected abstract double calcularAumento(double precioProducto);
+    public final double calcularPrecio(double precioProducto, Month mesActual) {
+        double precioTotal = precioProducto;
+        if (esMesEnPromocion(mesActual)) {
+            precioTotal += obtenerPrecioEnPromocion(precioProducto);
+        } else {
+            precioTotal += obtenerPrecioSinPromocion(precioProducto);
+        }
+        // log.log(CalculadorNoJubilado.class.getName());
+        return precioTotal;
+    }
+
+    protected abstract double obtenerPrecioSinPromocion(double precioProducto);
+
+    protected abstract double obtenerPrecioEnPromocion(double precioProducto);
+
+    protected boolean esMesEnPromocion(Month mesActual) {
+        return of(mesEnPromocion).equals(mesActual);
+    }
 
 
 }
