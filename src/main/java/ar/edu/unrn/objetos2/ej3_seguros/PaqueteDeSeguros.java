@@ -3,7 +3,7 @@ package ar.edu.unrn.objetos2.ej3_seguros;
 import java.util.List;
 
 public class PaqueteDeSeguros implements Seguro {
-    public static final double descuento = 0.05;
+    public static final float DESCUENTO_BASE = 0.05f;
     private List<Seguro> seguros;
 
     public PaqueteDeSeguros(List<Seguro> seguros) {
@@ -16,10 +16,16 @@ public class PaqueteDeSeguros implements Seguro {
 
     @Override
     public float calcularCosto() {
-        float total = 0;
+        float subTotal = 0f;
+        float descuento = DESCUENTO_BASE * obtenerCantidadDeSeguros();
         for (Seguro seguro : seguros) {
-            total += seguro.calcularCosto() - (seguro.calcularCosto() * descuento);
+            subTotal += seguro.calcularCosto();
         }
-        return total;
+
+        return subTotal - (subTotal * descuento);
+    }
+
+    public int obtenerCantidadDeSeguros() {
+        return seguros.size();
     }
 }
