@@ -12,4 +12,9 @@ public class SeguroSimple implements Seguro {
         return this.costo;
     }
 
+    @Override
+    public int esHoja() {
+        return 1;
+    }
+
 }

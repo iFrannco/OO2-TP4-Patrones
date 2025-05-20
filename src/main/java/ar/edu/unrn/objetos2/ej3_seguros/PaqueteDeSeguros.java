@@ -17,12 +17,20 @@ public class PaqueteDeSeguros implements Seguro {
     @Override
     public float calcularCosto() {
         float subTotal = 0f;
-        float descuento = DESCUENTO_BASE * obtenerCantidadDeSeguros();
+        int cantidad = 0;
+        float descuento = 0;
+        // float descuento = DESCUENTO_BASE * obtenerCantidadDeSeguros();
         for (Seguro seguro : seguros) {
             subTotal += seguro.calcularCosto();
+            cantidad += seguro.esHoja();
         }
-
+        descuento = cantidad * DESCUENTO_BASE;
         return subTotal - (subTotal * descuento);
+    }
+
+    @Override
+    public int esHoja() {
+        return 0;
     }
 
     public int obtenerCantidadDeSeguros() {
