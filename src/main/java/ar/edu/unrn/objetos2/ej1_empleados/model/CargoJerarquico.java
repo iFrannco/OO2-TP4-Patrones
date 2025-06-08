@@ -5,12 +5,9 @@ import java.util.List;
 
 public class CargoJerarquico extends Trabajador {
     private List<Trabajador> trabajadores;
-    private float sueldo;
-    private String nombre;
 
     public CargoJerarquico(String nombre, float sueldo) {
-        this.nombre = nombre;
-        this.sueldo = sueldo;
+        super(nombre, sueldo);
         this.trabajadores = new ArrayList<>();
     }
 
@@ -24,6 +21,6 @@ public class CargoJerarquico extends Trabajador {
         for (Trabajador trabajador : trabajadores) {
             resultado += trabajador.calcularSueldo();
         }
-        return resultado + this.sueldo;
+        return resultado + sueldo;
     }
 }

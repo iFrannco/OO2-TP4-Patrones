@@ -29,6 +29,7 @@ public class PaqueteDeSeguros implements Seguro {
     }
 
     @Override
+    // esto estaria mal, ya que estoy haciendo algo en base a preguntar por el tipo.
     public int esHoja() {
         return 0;
     }

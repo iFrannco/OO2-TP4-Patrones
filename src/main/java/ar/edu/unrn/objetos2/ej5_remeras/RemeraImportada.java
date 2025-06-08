@@ -10,7 +10,6 @@ public class RemeraImportada extends Remera {
         super(precioUnitario);
     }
 
-
     @Override
     protected float recargo(float precioUnitario) {
         return precioUnitario * RECARGO;

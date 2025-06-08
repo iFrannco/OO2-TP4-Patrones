@@ -1,11 +1,10 @@
 package ar.edu.unrn.objetos2.ej2_scrum;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Scrum {
-    private List<ItemDeTrabajo> itemsDeTrabajo = new ArrayList<>();
+    private List<ItemDeTrabajo> itemsDeTrabajo;
 
     public Scrum(List<ItemDeTrabajo> itemsDeTrabajo) {
         this.itemsDeTrabajo = itemsDeTrabajo;

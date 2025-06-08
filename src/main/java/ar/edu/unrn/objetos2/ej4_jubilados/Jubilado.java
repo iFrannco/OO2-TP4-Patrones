@@ -5,8 +5,8 @@ public class Jubilado extends Calculador {
 
     public static final double PORCENTAJE_SIN_PROMOCION = 0.1;
 
-    public Jubilado(int mesEnPromocion) {
-        super(mesEnPromocion);
+    public Jubilado(int mesEnPromocion, LogTransaction log) {
+        super(mesEnPromocion, log);
     }
 
     @Override

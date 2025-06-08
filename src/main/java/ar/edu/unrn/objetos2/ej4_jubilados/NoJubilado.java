@@ -1,12 +1,11 @@
 package ar.edu.unrn.objetos2.ej4_jubilados;
 
 public class NoJubilado extends Calculador {
-
     public static final double PORCENTAJE_SIN_PROMOCION = 0.21;
     public static final double PORCENTAJE_EN_PROMOCION = 0.15;
 
-    public NoJubilado(int mesEnPromocion) {
-        super(mesEnPromocion);
+    public NoJubilado(int mesEnPromocion, LogTransaction log) {
+        super(mesEnPromocion, log);
     }
 
     @Override

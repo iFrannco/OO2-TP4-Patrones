@@ -8,6 +8,12 @@ public abstract class Producto {
         this.precio = precio;
     }
 
+    public final double precioFinal() {
+        double subtotal = calcularPrecio();
+        double costoFinal = descontarEnvio(subtotal);
+        return costoFinal;
+    }
+
     public double descontarEnvio(double costo) {
         if (aplicaDescuentoEnvio()) {
             return costo - PRECIO_ENVIO;
@@ -16,12 +22,6 @@ public abstract class Producto {
     }
 
     public abstract boolean aplicaDescuentoEnvio();
-
-    public double precioFinal() {
-        double subtotal = calcularPrecio();
-        double costoFinal = descontarEnvio(subtotal);
-        return costoFinal;
-    }
 
     protected abstract double calcularPrecio();
 
