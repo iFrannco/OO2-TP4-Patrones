@@ -8,11 +8,11 @@ abstract class Producto2 {
         this.precio = precio;
     }
 
-    public abstract double obtenerImpuestos();
+    protected abstract double obtenerImpuestos();
 
-    public abstract double obtenerDescuentos();
+    protected abstract double obtenerDescuentos();
 
-    public abstract boolean tieneEnvioGratis();
+    protected abstract boolean tieneEnvioGratis();
 
     public final double precioFinal() {
         double impuestos = obtenerImpuestos();
